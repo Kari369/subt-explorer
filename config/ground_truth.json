@@ -1,0 +1,113 @@
+{
+  "cell_size": 3.0,
+  "layout": [
+    "###############",
+    "#S.......#....#",
+    "#.###.##.#.##.#",
+    "#.#.....#...#.#",
+    "#.#.###.###.#.#",
+    "#...#.....#...#",
+    "###.#.###.#.###",
+    "#.....#.......#",
+    "#.###.#.#####.#",
+    "#.#.......#...#",
+    "###############"
+  ],
+  "open_area_m2": 666.0,
+  "start": {
+    "cell": [
+      1,
+      1
+    ],
+    "x": 4.5,
+    "y": -4.5,
+    "yaw": 0.0
+  },
+  "base_station": {
+    "x": 3.6,
+    "y": -3.6
+  },
+  "artifacts": [
+    {
+      "name": "survivor_1",
+      "class": "survivor",
+      "x": 16.5,
+      "y": -29.55,
+      "cell": [
+        9,
+        5
+      ]
+    },
+    {
+      "name": "survivor_2",
+      "class": "survivor",
+      "x": 37.5,
+      "y": -3.45,
+      "cell": [
+        1,
+        12
+      ]
+    },
+    {
+      "name": "fire_extinguisher_1",
+      "class": "fire_extinguisher",
+      "x": 25.5,
+      "y": -15.45,
+      "cell": [
+        5,
+        8
+      ]
+    },
+    {
+      "name": "fire_extinguisher_2",
+      "class": "fire_extinguisher",
+      "x": 7.5,
+      "y": -23.55,
+      "cell": [
+        7,
+        2
+      ]
+    },
+    {
+      "name": "equipment_case_1",
+      "class": "equipment_case",
+      "x": 13.5,
+      "y": -9.45,
+      "cell": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "equipment_case_2",
+      "class": "equipment_case",
+      "x": 37.5,
+      "y": -29.55,
+      "cell": [
+        9,
+        12
+      ]
+    },
+    {
+      "name": "gas_hazard_1",
+      "class": "gas_hazard",
+      "x": 25.5,
+      "y": -21.45,
+      "cell": [
+        7,
+        8
+      ]
+    },
+    {
+      "name": "gas_hazard_2",
+      "class": "gas_hazard",
+      "x": 31.5,
+      "y": -11.55,
+      "cell": [
+        3,
+        10
+      ]
+    }
+  ],
+  "scoring_radius_m": 5.0
+}

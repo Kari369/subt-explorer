@@ -1,0 +1,549 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/robotnik/summit_xl_steel/protos/SummitXlSteel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/rocks/protos/Rock.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/fire_extinguisher/protos/FireExtinguisher.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/MetalStorageBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/lights/protos/ConstructionLamp.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/DryMud.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/RoughPine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/RustyMetal.proto"
+
+WorldInfo {
+  info [ "SubT-style underground exploration: a Summit-XL Steel explores an unknown mine." ]
+  title "Underground mine exploration"
+  basicTimeStep 32
+  randomSeed 0
+  contactProperties [
+    ContactProperties {
+      material1 "InteriorWheelMat"
+      coulombFriction [ 0, 2, 0 ]
+      frictionRotation -0.785398 0
+      bounce 0
+      forceDependentSlip [ 10, 0 ]
+      softCFM 0.0001
+    }
+    ContactProperties {
+      material1 "ExteriorWheelMat"
+      coulombFriction [ 0, 2, 0 ]
+      frictionRotation 0.785398 0
+      bounce 0
+      forceDependentSlip [ 10, 0 ]
+      softCFM 0.0001
+    }
+  ]
+}
+Viewpoint {
+  orientation 0 1 0 0.28
+  position 1.3 -4.5 1.75
+  near 0.1
+  exposure 1.5
+  follow "explorer"
+  followType "Mounted Shot"
+}
+Background {
+  skyColor [ 0.12 0.1 0.09 ]
+  luminosity 0.3
+}
+Fog {
+  color 0.06 0.055 0.05
+  fogType "EXPONENTIAL"
+  visibilityRange 28
+}
+
+Solid { translation 1.5 -1.5 1.6 name "rock_0_0" children [ Shape { appearance DEF ROCK_APP PBRAppearance { baseColor 0.62 0.56 0.5 roughness 1 metalness 0 baseColorMap ImageTexture { url [ "textures/rock.jpg" ] } normalMap ImageTexture { url [ "textures/rough_concrete_normal.jpg" ] } normalMapFactor 2.5 textureTransform TextureTransform { scale 1.3 1.3 } } geometry DEF WALL_BOX Box { size 3 3 3.2 } } ] boundingObject USE WALL_BOX }
+Solid { translation 4.5 -1.5 1.6 name "rock_0_1" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -1.5 1.6 name "rock_0_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 10.5 -1.5 1.6 name "rock_0_3" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -1.5 1.6 name "rock_0_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 16.5 -1.5 1.6 name "rock_0_5" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -1.5 1.6 name "rock_0_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 22.5 -1.5 1.6 name "rock_0_7" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -1.5 1.6 name "rock_0_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -1.5 1.6 name "rock_0_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -1.5 1.6 name "rock_0_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 34.5 -1.5 1.6 name "rock_0_11" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -1.5 1.6 name "rock_0_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 40.5 -1.5 1.6 name "rock_0_13" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -1.5 1.6 name "rock_0_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -4.5 1.6 name "rock_1_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -4.5 1.6 name "rock_1_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -4.5 1.6 name "rock_1_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -7.5 1.6 name "rock_2_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -7.5 1.6 name "rock_2_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 10.5 -7.5 1.6 name "rock_2_3" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -7.5 1.6 name "rock_2_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -7.5 1.6 name "rock_2_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 22.5 -7.5 1.6 name "rock_2_7" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -7.5 1.6 name "rock_2_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 34.5 -7.5 1.6 name "rock_2_11" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -7.5 1.6 name "rock_2_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -7.5 1.6 name "rock_2_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -10.5 1.6 name "rock_3_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -10.5 1.6 name "rock_3_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -10.5 1.6 name "rock_3_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -10.5 1.6 name "rock_3_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -10.5 1.6 name "rock_3_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -13.5 1.6 name "rock_4_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -13.5 1.6 name "rock_4_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -13.5 1.6 name "rock_4_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 16.5 -13.5 1.6 name "rock_4_5" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -13.5 1.6 name "rock_4_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -13.5 1.6 name "rock_4_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -13.5 1.6 name "rock_4_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -13.5 1.6 name "rock_4_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -13.5 1.6 name "rock_4_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -13.5 1.6 name "rock_4_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -16.5 1.6 name "rock_5_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -16.5 1.6 name "rock_5_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -16.5 1.6 name "rock_5_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -16.5 1.6 name "rock_5_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -19.5 1.6 name "rock_6_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 4.5 -19.5 1.6 name "rock_6_1" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -19.5 1.6 name "rock_6_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -19.5 1.6 name "rock_6_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -19.5 1.6 name "rock_6_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 22.5 -19.5 1.6 name "rock_6_7" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -19.5 1.6 name "rock_6_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -19.5 1.6 name "rock_6_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -19.5 1.6 name "rock_6_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 40.5 -19.5 1.6 name "rock_6_13" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -19.5 1.6 name "rock_6_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -22.5 1.6 name "rock_7_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -22.5 1.6 name "rock_7_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -22.5 1.6 name "rock_7_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -25.5 1.6 name "rock_8_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -25.5 1.6 name "rock_8_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 10.5 -25.5 1.6 name "rock_8_3" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -25.5 1.6 name "rock_8_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -25.5 1.6 name "rock_8_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -25.5 1.6 name "rock_8_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -25.5 1.6 name "rock_8_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -25.5 1.6 name "rock_8_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 34.5 -25.5 1.6 name "rock_8_11" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -25.5 1.6 name "rock_8_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -25.5 1.6 name "rock_8_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -28.5 1.6 name "rock_9_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -28.5 1.6 name "rock_9_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -28.5 1.6 name "rock_9_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -28.5 1.6 name "rock_9_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 1.5 -31.5 1.6 name "rock_10_0" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 4.5 -31.5 1.6 name "rock_10_1" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 7.5 -31.5 1.6 name "rock_10_2" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 10.5 -31.5 1.6 name "rock_10_3" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 13.5 -31.5 1.6 name "rock_10_4" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 16.5 -31.5 1.6 name "rock_10_5" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 19.5 -31.5 1.6 name "rock_10_6" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 22.5 -31.5 1.6 name "rock_10_7" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 25.5 -31.5 1.6 name "rock_10_8" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 28.5 -31.5 1.6 name "rock_10_9" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 31.5 -31.5 1.6 name "rock_10_10" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 34.5 -31.5 1.6 name "rock_10_11" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 37.5 -31.5 1.6 name "rock_10_12" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 40.5 -31.5 1.6 name "rock_10_13" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid { translation 43.5 -31.5 1.6 name "rock_10_14" children [ Shape { appearance USE ROCK_APP geometry USE WALL_BOX } ] boundingObject USE WALL_BOX }
+Solid {
+  translation 22.5 -16.5 -0.1
+  name "mine_floor"
+  children [ Shape { appearance DryMud { textureTransform TextureTransform { scale 11.25 8.25 } }
+    geometry DEF FLOOR_BOX Box { size 45 33 0.2 } } ]
+  boundingObject USE FLOOR_BOX
+}
+Solid { translation 22.5 -16.5 3.3 name "mine_ceiling" children [ Shape { appearance USE ROCK_APP geometry Box { size 45 33 0.2 } } ] }
+Rock { translation 3.802 -2.85 0.2797 rotation 0.07176 -0.2686 1 0.3642 name "boulder_0" scale 10.4 color 0.5515 0.5129 0.4688 }
+Rock { translation 2.85 -4.633 0.2998 rotation -0.151 0.6537 1 0.7775 name "boulder_1" scale 7.81 color 0.4946 0.46 0.4205 }
+Rock { translation 10.29 -2.85 0.2512 rotation 0.7169 -0.4208 1 0.9059 name "boulder_2" scale 11.9 color 0.4736 0.4404 0.4025 }
+Rock { translation 11.13 -6.15 0.8398 rotation 0.2778 -0.2552 1 3.44 name "boulder_3" scale 8.31 color 0.4626 0.4302 0.3932 }
+Rock { translation 12.91 -2.85 0.6704 rotation -0.3717 0.1711 1 2.846 name "boulder_4" scale 10.6 color 0.51 0.4743 0.4335 }
+Rock { translation 19.65 -2.85 1.163 rotation 0.4589 -0.4241 1 6.155 name "boulder_5" scale 9.86 color 0.4736 0.4405 0.4026 }
+Rock { translation 20.01 -6.15 0.7379 rotation -0.9216 0.3364 1 4.802 name "boulder_6" scale 8.18 color 0.5646 0.5251 0.4799 }
+Rock { translation 22.89 -6.15 0.8379 rotation -0.08759 0.6799 1 5.933 name "boulder_7" scale 10.2 color 0.5448 0.5067 0.4631 }
+Rock { translation 27.15 -4.097 1.292 rotation 0.6438 -0.4308 1 2.423 name "boulder_8" scale 10.4 color 0.5837 0.5429 0.4962 }
+Rock { translation 31.42 -2.85 0.3288 rotation -0.8821 0.5365 1 0.8123 name "boulder_9" scale 8.26 color 0.4995 0.4646 0.4246 }
+Rock { translation 29.85 -3.757 0.6941 rotation 0.09888 0.7668 1 5.145 name "boulder_10" scale 7.86 color 0.6228 0.5792 0.5294 }
+Rock { translation 34.33 -2.85 1.173 rotation 0.9155 -0.6982 1 1.107 name "boulder_11" scale 9.11 color 0.4964 0.4616 0.4219 }
+Rock { translation 34.47 -6.15 0.489 rotation -0.9918 -0.1621 1 2.319 name "boulder_12" scale 10.2 color 0.5633 0.5238 0.4788 }
+Rock { translation 40.74 -2.85 0.2594 rotation 0.7991 0.5599 1 5.492 name "boulder_13" scale 10.5 color 0.6096 0.5669 0.5181 }
+Rock { translation 42.15 -4.702 0.8977 rotation -0.8755 -0.8653 1 1.311 name "boulder_14" scale 7.97 color 0.4825 0.4487 0.4101 }
+Rock { translation 2.85 -8.395 0.3664 rotation -0.7971 -0.2728 1 0.1601 name "boulder_15" scale 7.5 color 0.6249 0.5811 0.5311 }
+Rock { translation 14.85 -7.995 0.6006 rotation -0.7543 0.6979 1 6.237 name "boulder_16" scale 9.06 color 0.5432 0.5052 0.4617 }
+Rock { translation 18.15 -8.328 0.5769 rotation -0.4705 0.6577 1 1.014 name "boulder_17" scale 7.96 color 0.4546 0.4228 0.3864 }
+Rock { translation 23.85 -8.207 0.2297 rotation 0.05622 0.957 1 5.422 name "boulder_18" scale 9.94 color 0.5892 0.548 0.5009 }
+Rock { translation 27.15 -7.767 1.049 rotation 0.06518 0.5581 1 2.07 name "boulder_19" scale 8.25 color 0.4946 0.46 0.4204 }
+Rock { translation 10.54 -8.85 0.2319 rotation -0.9441 -0.4412 1 1.628 name "boulder_20" scale 9.1 color 0.5885 0.5473 0.5002 }
+Rock { translation 14.37 -8.85 1.251 rotation -0.2707 -0.5591 1 1.425 name "boulder_21" scale 11.9 color 0.4893 0.4551 0.4159 }
+Rock { translation 13.75 -12.15 1.124 rotation -0.04105 0.306 1 5.022 name "boulder_22" scale 11.6 color 0.467 0.4343 0.3969 }
+Rock { translation 24.15 -11.14 0.5658 rotation 0.6016 0.9433 1 2.486 name "boulder_23" scale 11.1 color 0.5303 0.4932 0.4507 }
+Rock { translation 26.85 -11.25 1.195 rotation 0.613 -0.7077 1 5.19 name "boulder_24" scale 8.18 color 0.6461 0.6008 0.5492 }
+Rock { translation 34.6 -8.85 0.2157 rotation 0.9418 0.2993 1 3.307 name "boulder_25" scale 8.09 color 0.6367 0.5922 0.5412 }
+Rock { translation 36.15 -9.757 0.4321 rotation -0.4963 -0.4141 1 1.511 name "boulder_26" scale 11.2 color 0.5673 0.5276 0.4822 }
+Rock { translation 38.85 -10.66 1.201 rotation -0.2924 -0.08368 1 3.663 name "boulder_27" scale 8.09 color 0.6309 0.5867 0.5362 }
+Rock { translation 42.15 -9.665 0.785 rotation 0.04701 -0.9626 1 2.764 name "boulder_28" scale 9.76 color 0.4866 0.4526 0.4136 }
+Rock { translation 2.85 -12.9 0.7208 rotation 0.4504 0.113 1 2.047 name "boulder_29" scale 8.28 color 0.5537 0.5149 0.4706 }
+Rock { translation 6.15 -12.93 0.8163 rotation -0.503 -0.4462 1 4.85 name "boulder_30" scale 7.98 color 0.5515 0.5129 0.4688 }
+Rock { translation 8.85 -12.98 0.6876 rotation 0.2251 0.01111 1 3.216 name "boulder_31" scale 11.6 color 0.5885 0.5473 0.5003 }
+Rock { translation 12.15 -13.43 1.236 rotation 0.3984 0.7531 1 5.917 name "boulder_32" scale 9.65 color 0.5019 0.4668 0.4266 }
+Rock { translation 20.85 -12.61 0.3508 rotation -0.7568 -0.1158 1 0.4556 name "boulder_33" scale 11.3 color 0.4981 0.4633 0.4234 }
+Rock { translation 24.15 -13.16 1.187 rotation -0.6911 0.4322 1 4.146 name "boulder_34" scale 11 color 0.4786 0.4451 0.4068 }
+Rock { translation 38.85 -12.59 0.736 rotation 0.9797 0.6649 1 1.014 name "boulder_35" scale 9.29 color 0.5363 0.4988 0.4559 }
+Rock { translation 42.15 -13.82 0.5504 rotation 0.4443 -0.961 1 3.479 name "boulder_36" scale 8.38 color 0.5381 0.5004 0.4574 }
+Rock { translation 4.163 -18.15 0.7635 rotation -0.8714 0.9702 1 4.951 name "boulder_37" scale 10.3 color 0.6443 0.5992 0.5477 }
+Rock { translation 2.85 -16.97 1.057 rotation -0.4591 -0.7409 1 2.652 name "boulder_38" scale 7.68 color 0.6323 0.588 0.5374 }
+Rock { translation 6.799 -18.15 0.8277 rotation 0.4008 -0.8211 1 0.3613 name "boulder_39" scale 11.6 color 0.5876 0.5465 0.4995 }
+Rock { translation 12.15 -17.36 0.8979 rotation 0.6033 -0.8325 1 5.377 name "boulder_40" scale 11.7 color 0.4633 0.4309 0.3938 }
+Rock { translation 14.85 -16.82 1.219 rotation -0.4643 -0.7416 1 3.309 name "boulder_41" scale 9.99 color 0.4977 0.4628 0.423 }
+Rock { translation 18.82 -14.85 0.4219 rotation -0.376 -0.39 1 4.77 name "boulder_42" scale 7.73 color 0.508 0.4724 0.4318 }
+Rock { translation 18.86 -18.15 0.22 rotation -0.4991 -0.9693 1 4.604 name "boulder_43" scale 9.06 color 0.5602 0.521 0.4762 }
+Rock { translation 22.45 -18.15 0.3169 rotation 0.6378 -0.1356 1 3.109 name "boulder_44" scale 11.7 color 0.6169 0.5737 0.5244 }
+Rock { translation 25.51 -14.85 1.281 rotation -0.3146 0.6646 1 4.438 name "boulder_45" scale 10.6 color 0.5772 0.5368 0.4906 }
+Rock { translation 25.2 -18.15 0.3428 rotation -0.8586 0.4818 1 1.605 name "boulder_46" scale 7.74 color 0.4826 0.4489 0.4103 }
+Rock { translation 29.18 -14.85 0.9376 rotation -0.4361 -0.5156 1 1.84 name "boulder_47" scale 11.4 color 0.5419 0.504 0.4606 }
+Rock { translation 30.15 -16.61 1.258 rotation 0.9452 0.09415 1 1.535 name "boulder_48" scale 8.68 color 0.6431 0.5981 0.5467 }
+Rock { translation 32.85 -16.79 0.6198 rotation -0.05071 0.005528 1 1.262 name "boulder_49" scale 7.5 color 0.5509 0.5124 0.4683 }
+Rock { translation 37.03 -14.85 0.6395 rotation -0.9167 -0.955 1 1.911 name "boulder_50" scale 7.9 color 0.4966 0.4618 0.4221 }
+Rock { translation 37.56 -18.15 0.9233 rotation 0.432 0.7582 1 2.446 name "boulder_51" scale 10.9 color 0.5152 0.4792 0.4379 }
+Rock { translation 42.15 -16.05 0.2482 rotation 0.6706 0.7839 1 3.94 name "boulder_52" scale 10.4 color 0.5968 0.555 0.5073 }
+Rock { translation 12.15 -19.45 1.118 rotation 0.6094 0.6528 1 3.668 name "boulder_53" scale 9.77 color 0.6286 0.5846 0.5343 }
+Rock { translation 26.85 -20.44 0.5968 rotation -0.7902 0.6716 1 3.508 name "boulder_54" scale 8.1 color 0.5756 0.5353 0.4892 }
+Rock { translation 36.15 -20.49 1.023 rotation 0.005942 0.0704 1 4.14 name "boulder_55" scale 11.1 color 0.4632 0.4308 0.3937 }
+Rock { translation 2.85 -23.35 1.002 rotation -0.5896 0.4797 1 6.128 name "boulder_56" scale 8.7 color 0.5488 0.5104 0.4665 }
+Rock { translation 7.458 -20.85 1.044 rotation 0.2339 0.2855 1 0.4865 name "boulder_57" scale 10.6 color 0.4795 0.4459 0.4076 }
+Rock { translation 7.986 -24.15 0.8245 rotation -0.9751 -0.8787 1 1.688 name "boulder_58" scale 8.87 color 0.5844 0.5435 0.4967 }
+Rock { translation 13.53 -24.15 0.713 rotation -0.763 0.7873 1 1.251 name "boulder_59" scale 9.59 color 0.6456 0.6004 0.5488 }
+Rock { translation 22.42 -20.85 1.265 rotation -0.1011 -0.4627 1 1.318 name "boulder_60" scale 11.2 color 0.6391 0.5944 0.5432 }
+Rock { translation 20.85 -22.34 0.7765 rotation 0.9055 -0.7348 1 5.151 name "boulder_61" scale 8.14 color 0.5517 0.5131 0.469 }
+Rock { translation 29.3 -24.15 0.2273 rotation -0.9928 -0.01661 1 2.831 name "boulder_62" scale 9.69 color 0.5104 0.4747 0.4338 }
+Rock { translation 31.19 -20.85 1.124 rotation -0.9965 0.5015 1 5.27 name "boulder_63" scale 8.92 color 0.474 0.4408 0.4029 }
+Rock { translation 37.24 -24.15 1.299 rotation 0.1784 -0.2786 1 2.688 name "boulder_64" scale 9.27 color 0.505 0.4697 0.4293 }
+Rock { translation 39.7 -20.85 0.5142 rotation 0.8712 -0.5014 1 1.669 name "boulder_65" scale 11.3 color 0.5522 0.5135 0.4694 }
+Rock { translation 42.15 -22.75 1.173 rotation 0.6239 0.2618 1 5.736 name "boulder_66" scale 11.8 color 0.6381 0.5935 0.5424 }
+Rock { translation 2.85 -25.06 1.006 rotation -0.09828 0.5053 1 4.047 name "boulder_67" scale 7.72 color 0.5072 0.4717 0.4312 }
+Rock { translation 6.15 -24.65 0.7194 rotation -0.3127 -0.4045 1 4.641 name "boulder_68" scale 8.07 color 0.6453 0.6001 0.5485 }
+Rock { translation 14.85 -25.19 0.8131 rotation -0.2113 -0.6653 1 1.015 name "boulder_69" scale 8.85 color 0.4916 0.4572 0.4178 }
+Rock { translation 20.85 -26.06 1.296 rotation -0.1001 -0.7208 1 1.208 name "boulder_70" scale 11.6 color 0.4681 0.4354 0.3979 }
+Rock { translation 24.15 -26.32 0.4842 rotation 0.1392 0.7745 1 4.708 name "boulder_71" scale 8.58 color 0.5326 0.4953 0.4527 }
+Rock { translation 38.85 -25.45 0.572 rotation -0.8759 -0.445 1 6.077 name "boulder_72" scale 9.2 color 0.4752 0.4419 0.4039 }
+Rock { translation 42.15 -25.24 0.4376 rotation -0.458 -0.5031 1 2.51 name "boulder_73" scale 11.4 color 0.5392 0.5014 0.4583 }
+Rock { translation 9.564 -26.85 1.185 rotation -0.05346 0.1744 1 0.001122 name "boulder_74" scale 10.7 color 0.5283 0.4913 0.4491 }
+Rock { translation 15.72 -30.15 0.7746 rotation 0.3642 0.883 1 4.532 name "boulder_75" scale 8.19 color 0.5795 0.5389 0.4925 }
+Rock { translation 19.6 -30.15 1.061 rotation -0.5348 0.8398 1 4.054 name "boulder_76" scale 7.68 color 0.5108 0.475 0.4341 }
+Rock { translation 22 -30.15 0.9684 rotation -0.7757 -0.8593 1 3.293 name "boulder_77" scale 10.4 color 0.5666 0.5269 0.4816 }
+Rock { translation 24.95 -26.85 0.2115 rotation -0.397 -0.07862 1 6.022 name "boulder_78" scale 10.2 color 0.5789 0.5384 0.4921 }
+Rock { translation 27.97 -26.85 1.257 rotation 0.4093 -0.3852 1 0.1368 name "boulder_79" scale 8.61 color 0.5497 0.5112 0.4672 }
+Rock { translation 30.15 -28.99 1.218 rotation -0.5464 -0.9318 1 2.123 name "boulder_80" scale 10.5 color 0.5341 0.4967 0.454 }
+Rock { translation 35.09 -30.15 0.7554 rotation -0.5896 0.9397 1 1.958 name "boulder_81" scale 10.8 color 0.614 0.571 0.5219 }
+Rock { translation 32.85 -29.06 0.5244 rotation 0.9039 -0.008471 1 1.176 name "boulder_82" scale 10.9 color 0.4947 0.46 0.4205 }
+Rock { translation 37.83 -26.85 0.361 rotation -0.2131 -0.5741 1 6.117 name "boulder_83" scale 11.8 color 0.4784 0.4449 0.4066 }
+Rock { translation 36.62 -30.15 1.188 rotation 0.7672 0.4654 1 6.264 name "boulder_84" scale 9.27 color 0.6363 0.5918 0.5409 }
+Rock { translation 39.87 -30.15 1.021 rotation -0.9362 0.3289 1 2.378 name "boulder_85" scale 11.7 color 0.5248 0.488 0.4461 }
+Rock { translation 42.15 -29.16 0.5078 rotation -0.2971 0.911 1 0.7769 name "boulder_86" scale 7.51 color 0.6429 0.5979 0.5464 }
+Pose { translation 7.5 -4.95 0.02 children [ Shape { appearance DEF RAIL_APP RustyMetal { } geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 7.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance DEF DUCT_APP PBRAppearance { baseColor 0.85 0.62 0.12 roughness 0.85 metalness 0 } geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 10.5 -3.12 1.45 name "post_1_3_0" children [ Shape { appearance DEF TIMBER RoughPine { colorOverride 0.5 0.36 0.24 textureTransform TextureTransform { scale 0.3 2 } } geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 10.5 -5.88 1.45 name "post_1_3_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 10.5 -4.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 0.22 3 0.22 } } ] }
+Pose { translation 10.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 10.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 10.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 10.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 13.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 13.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 19.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 19.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 22.5 -3.12 1.45 name "post_1_7_0" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 22.5 -5.88 1.45 name "post_1_7_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 22.5 -4.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 0.22 3 0.22 } } ] }
+Pose { translation 22.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 22.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 22.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 22.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 34.5 -3.12 1.45 name "post_1_11_0" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 34.5 -5.88 1.45 name "post_1_11_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 34.5 -4.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 0.22 3 0.22 } } ] }
+Pose { translation 34.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 34.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 34.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 34.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 37.5 -4.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -4.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -3.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 37.5 -5.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 4.05 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 4.95 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 5.75 -7.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 3.45 -7.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 16.05 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 16.95 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 17.75 -7.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 15.45 -7.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 32.88 -7.5 1.45 name "post_2_10_0" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 30.12 -7.5 1.45 name "post_2_10_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 31.5 -7.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 3 0.22 0.22 } } ] }
+Pose { translation 31.05 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 31.95 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 32.75 -7.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 30.45 -7.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 40.05 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 40.95 -7.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 41.75 -7.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 39.45 -7.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 5.88 -10.5 1.45 name "post_3_1_0" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 3.12 -10.5 1.45 name "post_3_1_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 4.5 -10.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 3 0.22 0.22 } } ] }
+Pose { translation 4.05 -10.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 4.95 -10.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 5.75 -10.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 3.45 -10.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 13.5 -10.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -10.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -9.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 13.5 -11.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 19.5 -10.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -10.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -9.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 19.5 -11.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Solid { translation 41.88 -10.5 1.45 name "post_3_13_0" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Solid { translation 39.12 -10.5 1.45 name "post_3_13_1" children [ Shape { appearance USE TIMBER geometry Box { size 0.22 0.22 2.9 } } ] boundingObject Box { size 0.22 0.22 2.9 } }
+Pose { translation 40.5 -10.5 2.8 children [ Shape { appearance USE TIMBER geometry Box { size 3 0.22 0.22 } } ] }
+Pose { translation 40.05 -10.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 40.95 -10.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 41.75 -10.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 39.45 -10.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 4.05 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 4.95 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 5.75 -13.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 3.45 -13.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 10.05 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 10.95 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 11.75 -13.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 9.45 -13.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 22.05 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 22.95 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 23.75 -13.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 21.45 -13.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 34.05 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 34.95 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 35.75 -13.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 33.45 -13.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 40.05 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 40.95 -13.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 41.75 -13.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 39.45 -13.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 7.5 -16.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -16.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -15.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 7.5 -17.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 19.5 -16.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -16.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -15.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 19.5 -17.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 25.5 -16.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -16.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -15.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 25.5 -17.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 37.5 -16.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -16.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -15.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 37.5 -17.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 10.05 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 10.95 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 11.75 -19.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 9.45 -19.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 16.05 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 16.95 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 17.75 -19.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 15.45 -19.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 28.05 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 28.95 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 29.75 -19.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 27.45 -19.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 34.05 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 34.95 -19.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 35.75 -19.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 33.45 -19.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 7.5 -22.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -22.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 7.5 -21.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 7.5 -23.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 13.5 -22.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -22.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -21.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 13.5 -23.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 25.5 -22.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -22.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -21.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 25.5 -23.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 31.5 -22.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 31.5 -22.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 31.5 -21.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 31.5 -23.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 37.5 -22.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -22.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -21.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 37.5 -23.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 4.05 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 4.95 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 5.75 -25.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 3.45 -25.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 16.05 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 16.95 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 17.75 -25.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 15.45 -25.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 22.05 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 22.95 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 23.75 -25.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 21.45 -25.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 40.05 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 40.95 -25.5 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 0.07 3 0.04 } } ] }
+Pose { translation 41.75 -25.5 2.85 rotation 1 0 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 39.45 -25.5 2.75 rotation 1 0 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 13.5 -28.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -28.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 13.5 -27.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 13.5 -29.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 19.5 -28.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -28.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 19.5 -27.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 19.5 -29.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 25.5 -28.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -28.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 25.5 -27.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 25.5 -29.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Pose { translation 37.5 -28.95 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -28.05 0.02 children [ Shape { appearance USE RAIL_APP geometry Box { size 3 0.07 0.04 } } ] }
+Pose { translation 37.5 -27.25 2.85 rotation 0 1 0 1.5708 children [ Shape { appearance PBRAppearance { baseColor 0.05 0.05 0.05 roughness 0.6 } geometry Cylinder { height 3.0 radius 0.03 } } ] }
+Pose { translation 37.5 -29.55 2.75 rotation 0 1 0 1.5708 children [ Shape { appearance USE DUCT_APP geometry Cylinder { height 3.02 radius 0.24 subdivision 20 } } ] }
+Rock { translation 24.91 -7.787 0.4367 rotation 0.6431 0.644 1 2.716 name "rubble_2_8_0" scale 9.49 color 0.4074 0.3789 0.3463 }
+Rock { translation 26.34 -8.114 0.6059 rotation -0.2715 0.794 1 0.1902 name "rubble_2_8_1" scale 11.1 color 0.4616 0.4293 0.3924 }
+Rock { translation 24.58 -8.43 0.6493 rotation -0.8748 0.8402 1 1.614 name "rubble_2_8_2" scale 9.36 color 0.5121 0.4762 0.4353 }
+Rock { translation 25.04 -6.585 0.3378 rotation 0.234 -0.4757 1 4.5 name "rubble_2_8_3" scale 8.02 color 0.4475 0.4161 0.3804 }
+Rock { translation 26.01 -6.667 0.4376 rotation 0.268 0.8865 1 0.1523 name "rubble_2_8_4" scale 11.8 color 0.4351 0.4046 0.3698 }
+Rock { translation 26.41 -7.727 0.2915 rotation -0.4979 -0.1401 1 3.099 name "rubble_2_8_5" scale 11.2 color 0.5392 0.5015 0.4583 }
+Rock { translation 25.98 -6.854 0.3809 rotation 0.5456 0.2145 1 2.059 name "rubble_2_8_6" scale 11.1 color 0.4479 0.4166 0.3807 }
+Pose { translation 24.99 -7.863 0.6 rotation 0.5058 -0.5054 0.3 0.6388 children [ Shape { appearance USE TIMBER geometry Box { size 0.2 0.2 2.2 } } ] }
+Pose { translation 24.94 -7.437 0.6 rotation -0.3485 0.9605 0.3 1.13 children [ Shape { appearance USE TIMBER geometry Box { size 0.2 0.2 2.2 } } ] }
+Rock { translation 5.476 -28.97 0.4235 rotation -0.8318 -0.8072 1 3.13 name "rubble_9_1_0" scale 8.94 color 0.5065 0.471 0.4305 }
+Rock { translation 4.334 -28.26 0.2606 rotation 0.3482 0.496 1 5.319 name "rubble_9_1_1" scale 11.4 color 0.4997 0.4647 0.4247 }
+Rock { translation 4.088 -28.37 0.3227 rotation -0.2541 0.4761 1 1.251 name "rubble_9_1_2" scale 8.61 color 0.4371 0.4065 0.3715 }
+Rock { translation 5.268 -28.34 0.3157 rotation -0.3473 -0.2079 1 6.233 name "rubble_9_1_3" scale 11.2 color 0.4761 0.4428 0.4047 }
+Rock { translation 4.807 -27.52 0.6572 rotation -0.7953 -0.05047 1 5.144 name "rubble_9_1_4" scale 8.16 color 0.5261 0.4893 0.4472 }
+Rock { translation 4.087 -29.26 0.3861 rotation -0.6209 0.9459 1 3.662 name "rubble_9_1_5" scale 11.5 color 0.5395 0.5018 0.4586 }
+Rock { translation 4.398 -28.98 0.51 rotation 0.5556 0.8914 1 0.6643 name "rubble_9_1_6" scale 8.87 color 0.4894 0.4552 0.416 }
+Pose { translation 4.342 -28.93 0.6 rotation -0.592 -0.4902 0.3 0.9597 children [ Shape { appearance USE TIMBER geometry Box { size 0.2 0.2 2.2 } } ] }
+Pose { translation 4.682 -28.86 0.6 rotation -0.9772 -0.3455 0.3 1.007 children [ Shape { appearance USE TIMBER geometry Box { size 0.2 0.2 2.2 } } ] }
+Solid { translation 20.1 -3.65 0 rotation 0 0 1 0.3 name "mine_cart" children [ Pose { translation 0 0 0.55 children [ Shape { appearance RustyMetal { } geometry Box { size 1.2 0.85 0.65 } } ] } Pose { translation -0.4 -0.45 0.14 rotation 1 0 0 1.5708 children [ Shape { appearance USE RAIL_APP geometry Cylinder { height 0.06 radius 0.14 } } ] } Pose { translation -0.4 0.45 0.14 rotation 1 0 0 1.5708 children [ Shape { appearance USE RAIL_APP geometry Cylinder { height 0.06 radius 0.14 } } ] } Pose { translation 0.4 -0.45 0.14 rotation 1 0 0 1.5708 children [ Shape { appearance USE RAIL_APP geometry Cylinder { height 0.06 radius 0.14 } } ] } Pose { translation 0.4 0.45 0.14 rotation 1 0 0 1.5708 children [ Shape { appearance USE RAIL_APP geometry Cylinder { height 0.06 radius 0.14 } } ] } ] boundingObject Pose { translation 0 0 0.5 children [ Box { size 1.2 0.85 0.8 } ] } }
+PointLight { location 4.5 -4.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 4.5 -4.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 16.5 -4.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 16.5 -4.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 40.5 -4.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 40.5 -4.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 31.5 -7.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 31.5 -7.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 10.5 -10.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 10.5 -10.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 22.5 -10.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 22.5 -10.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 34.5 -10.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 34.5 -10.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 4.5 -16.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 4.5 -16.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 16.5 -16.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 16.5 -16.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 28.5 -16.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 28.5 -16.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 40.5 -16.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 40.5 -16.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 10.5 -22.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 10.5 -22.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 22.5 -22.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 22.5 -22.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 34.5 -22.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 34.5 -22.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 4.5 -28.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 4.5 -28.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 16.5 -28.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 16.5 -28.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 28.5 -28.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 28.5 -28.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+PointLight { location 40.5 -28.5 2.75 color 1 0.72 0.42 intensity 1.6 attenuation 0 0 0.35 radius 8 castShadows FALSE }
+Pose { translation 40.5 -28.5 2.85 children [ Shape { appearance PBRAppearance { baseColor 1 0.8 0.5 emissiveColor 1 0.7 0.35 emissiveIntensity 3 } geometry Sphere { radius 0.07 subdivision 2 } } ] }
+DEF BASE_STATION Solid {
+  translation 3.6 -3.6 0
+  name "base_station"
+  children [
+    Pose { translation 0 0 0.9 children [ Shape { appearance RustyMetal { } geometry Cylinder { height 1.8 radius 0.04 } } ] }
+    Pose { translation 0 0 0.25 children [ Shape { appearance PBRAppearance { baseColor 0.9 0.6 0.05 roughness 0.5 } geometry Box { size 0.45 0.35 0.5 } } ] }
+    Pose { translation 0 0 1.85 children [ Shape { appearance PBRAppearance { baseColor 0.1 1 0.3 emissiveColor 0.1 1 0.3 emissiveIntensity 4 } geometry Sphere { radius 0.06 } } ] }
+    PointLight { location 0 0 1.9 color 0.2 1 0.4 intensity 0.6 attenuation 0 0 1 radius 4 }
+  ]
+  boundingObject Pose { translation 0 0 0.25 children [ Box { size 0.45 0.35 0.5 } ] }
+}
+ConstructionLamp { translation 3.4 -5.5 0.07 rotation 0 0 1 0.6 spotLightIntensity 1.5 spotLightColor 1 0.9 0.75 }
+WoodenBox { translation 3.45 -4.7 0.3 name "supply crate" size 0.6 0.6 0.6 }
+Pedestrian { translation 16.5 -29.55 1.27 rotation 0 0 1 1.5708 name "survivor_1" controller "<none>" shirtColor 0.85 0.4 0.05 pantsColor 0.15 0.15 0.2 enableBoundingObject TRUE bodySlot [ Solid { name "survivor_1_tag" model "survivor" recognitionColors [ 1 0.45 0 ] children [ Pose { translation 0 0 0.1 children [ Shape { appearance PBRAppearance { baseColor 1 0.45 0 emissiveColor 0.4 0.15 0 roughness 0.4 } geometry Box { size 0.26 0.4 0.45 } } ] } Pose { translation 0.02 0 0.58 children [ Shape { appearance PBRAppearance { baseColor 1 0.85 0.05 roughness 0.35 } geometry Sphere { radius 0.13 subdivision 2 } } ] } Pose { translation 0.14 0 0.6 children [ Shape { appearance PBRAppearance { baseColor 1 1 0.9 emissiveColor 1 1 0.85 emissiveIntensity 5 } geometry Cylinder { height 0.03 radius 0.03 } } ] } ] } ] }
+Pose { translation 16.8 -28.95 0.03 rotation 0 0 1 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.3 1 0.3 emissiveColor 0.2 1 0.2 emissiveIntensity 6 } geometry Capsule { height 0.14 radius 0.012 } } ] } PointLight { location 16.8 -28.95 0.15 color 0.3 1 0.35 intensity 0.8 attenuation 0 0 1.2 radius 4 }
+Pedestrian { translation 37.5 -3.45 0.2 rotation 0 1 0 1.5708 name "survivor_2" controller "<none>" shirtColor 0.85 0.4 0.05 pantsColor 0.15 0.15 0.2 enableBoundingObject TRUE bodySlot [ Solid { name "survivor_2_tag" model "survivor" recognitionColors [ 1 0.45 0 ] children [ Pose { translation 0 0 0.1 children [ Shape { appearance PBRAppearance { baseColor 1 0.45 0 emissiveColor 0.4 0.15 0 roughness 0.4 } geometry Box { size 0.26 0.4 0.45 } } ] } Pose { translation 0.02 0 0.58 children [ Shape { appearance PBRAppearance { baseColor 1 0.85 0.05 roughness 0.35 } geometry Sphere { radius 0.13 subdivision 2 } } ] } Pose { translation 0.14 0 0.6 children [ Shape { appearance PBRAppearance { baseColor 1 1 0.9 emissiveColor 1 1 0.85 emissiveIntensity 5 } geometry Cylinder { height 0.03 radius 0.03 } } ] } ] } ] }
+Pose { translation 37.8 -4.05 0.03 rotation 0 0 1 0.7 children [ Shape { appearance PBRAppearance { baseColor 0.3 1 0.3 emissiveColor 0.2 1 0.2 emissiveIntensity 6 } geometry Capsule { height 0.14 radius 0.012 } } ] } PointLight { location 37.8 -4.05 0.15 color 0.3 1 0.35 intensity 0.8 attenuation 0 0 1.2 radius 4 }
+Solid { translation 25.5 -15.45 0 rotation 0 0 1 -1.5708 name "fire_extinguisher_1" model "fire_extinguisher" recognitionColors [ 0.9 0.1 0.1 ] children [ FireExtinguisher { enablePhysics FALSE } ] }
+Solid { translation 7.5 -23.55 0 rotation 0 0 1 1.5708 name "fire_extinguisher_2" model "fire_extinguisher" recognitionColors [ 0.9 0.1 0.1 ] children [ FireExtinguisher { enablePhysics FALSE } ] }
+Solid { translation 13.5 -9.45 0 rotation 0 0 1 -1.5708 name "equipment_case_1" model "equipment_case" recognitionColors [ 0.2 0.6 1 ] children [ MetalStorageBox { } ] }
+Solid { translation 37.5 -29.55 0 rotation 0 0 1 1.5708 name "equipment_case_2" model "equipment_case" recognitionColors [ 0.2 0.6 1 ] children [ MetalStorageBox { } ] }
+Solid { translation 25.5 -21.45 0 rotation 0 0 1 -1.5708 name "gas_hazard_1" model "gas_hazard" recognitionColors [ 1 0.9 0 ] children [ OilBarrel { translation 0 0 0.44 } ] }
+Solid { translation 31.5 -11.55 0 rotation 0 0 1 1.5708 name "gas_hazard_2" model "gas_hazard" recognitionColors [ 1 0.9 0 ] children [ OilBarrel { translation 0 0 0.44 } ] }
+DEF EXPLORER SummitXlSteel {
+  translation 4.5 -4.5 0.118
+  rotation 0 0 1 0.0000
+  name "explorer"
+  controller "mine_explorer"
+  controllerArgs [ "seed=0" ]
+  bodySlot [
+    Pose { translation 0 0 0.12 children [ Shape { appearance DEF MAST_APP PBRAppearance { baseColor 0.12 0.12 0.13 roughness 0.4 metalness 0.6 } geometry Cylinder { height 0.24 radius 0.035 } } ] }
+    Lidar {
+      translation 0 0 0.27
+      name "lidar"
+      horizontalResolution 360
+      fieldOfView 6.2832
+      numberOfLayers 5
+      verticalFieldOfView 0.6
+      minRange 0.08
+      maxRange 15
+      noise 0.003
+      children [ Shape { appearance USE MAST_APP geometry Cylinder { height 0.08 radius 0.055 } } ]
+    }
+    Pose { translation 0 0 0.35 children [ Shape { appearance PBRAppearance { baseColor 1 0.5 0 emissiveColor 1 0.45 0 emissiveIntensity 3 } geometry Cylinder { height 0.05 radius 0.03 } } ] }
+    Display {
+      name "map_display"
+      width 480
+      height 480
+    }
+    Camera {
+      translation 0.34 0 0.06
+      name "artifact_camera"
+      fieldOfView 1.2
+      width 640
+      height 360
+      exposure 1.6
+      recognition Recognition {
+        maxRange 14
+        maxObjects 10
+        frameColor 1 0.55 0
+        frameThickness 2
+      }
+    }
+    SpotLight { location 0.36 0.2 0.02 direction 1 0 -0.12 color 1 0.95 0.85 intensity 4 beamWidth 0.45 cutOffAngle 0.75 attenuation 0 0 0.15 radius 30 castShadows TRUE }
+    SpotLight { location 0.36 -0.2 0.02 direction 1 0 -0.12 color 1 0.95 0.85 intensity 4 beamWidth 0.45 cutOffAngle 0.75 attenuation 0 0 0.15 radius 30 }
+    Pose { translation 0.37 0.2 0.02 children [ DEF HEADLAMP Shape { appearance PBRAppearance { baseColor 1 1 0.95 emissiveColor 1 1 0.9 emissiveIntensity 4 } geometry Box { size 0.02 0.09 0.04 } } ] }
+    Pose { translation 0.37 -0.2 0.02 children [ USE HEADLAMP ] }
+  ]
+}

@@ -1,0 +1,13 @@
+condition,run,mission_time_s,finished_early,coverage_pct,found,points,possible,mean_error_m,mean_delay_s,max_delay_s,out_of_contact_s,returns_to_comms,interventions
+manual,run_2026-11-12_01-20-18_manual,600,False,47.9,2,2,8,0.08,0.0,0.0,26.7,0,1
+manual,run_2026-11-12_11-50-41_manual,600,False,47.2,2,2,8,0.04,0.0,0.0,21.3,0,0
+supervised,run_2026-11-12_13-28-30_supervised,600,False,91.1,8,8,8,0.08,43.0,121.5,431.0,3,7
+supervised,run_2026-11-12_13-39-22_supervised,361,True,92.3,7,7,8,0.12,19.2,45.5,195.3,1,3
+auto_report,run_2026-11-12_13-47-06_auto_report,408,True,92.3,7,7,8,0.11,17.7,65.8,214.5,1,0
+auto_report,run_2026-11-12_13-50-57_auto_report,401,True,92.4,7,7,8,0.11,20.0,82.6,226.8,1,0
+auto_report,run_2026-11-12_13-54-44_auto_report,457,True,92.4,7,7,8,0.11,22.3,92.5,253.1,2,0
+auto_explore,run_2026-11-12_13-58-41_auto_explore,397,True,92.3,7,7,8,0.1,23.0,68.0,213.9,0,0
+auto_explore,run_2026-11-12_14-02-04_auto_explore,374,True,92.1,7,7,8,0.1,25.9,66.5,227.9,0,0
+auto_explore,run_2026-11-12_14-05-23_auto_explore,414,True,92.4,7,7,8,0.12,25.8,83.9,232.1,0,0
+supervised,run_2026-11-13_09-12-59_supervised,486,True,89.5,8,8,8,0.09,20.8,97.1,310.8,2,2
+manual,run_2026-11-13_09-24-30_manual,600,False,48.2,2,2,8,0.06,0.1,0.2,23.8,0,0
